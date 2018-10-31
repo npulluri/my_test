@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :roles, through: :assignments
   has_many :articles
 
-  validates_presence_of :email, :password
+  validates_presence_of :email
 
   def role?(role)
     roles.any?{ |r| r.name == role }

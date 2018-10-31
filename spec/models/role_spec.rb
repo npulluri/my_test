@@ -7,9 +7,4 @@ RSpec.describe Role, type: :model do
     it {should have_many(:users).through(:assignments)}
   end
 
-  describe "validations" do
-    it {should validate_presence_of(:name)}
-  end
-
-
 end
